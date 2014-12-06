@@ -1,0 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
+
+html {
+  font-family: 'Roboto Slab', serif;
+}
+
+
+// injector
+@import '../components/view-box/view-box.directive.scss';
+@import '../components/view-layout/view-layout.directive.scss';
+// endinjector
