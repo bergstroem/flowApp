@@ -1,8 +1,48 @@
+$width: 6px;
+$length: 400px;
+$tip-width: 15px;
+$arrow-color: #333;
 
+.tip {
+	content: " ";
+	position: absolute;
+	width: 0; 
+	height: 0;
+}
 
 view-arrow {
   display: block;
-  background-color: red;
-  height: 100px;
-  width: 100px;
+  background: $arrow-color;
+  margin: 50px;
+  position: relative;
+
+  &.right {
+		width: $length;
+		height: $width;
+
+		&::after {
+			@extend .tip;
+			right: 0px;
+			margin-top: -12.5px;
+			margin-right: -$tip-width;
+			border-top: $tip-width solid transparent;
+			border-bottom: $tip-width solid transparent; 
+			
+			border-left: $tip-width solid #333; 
+		}
+	}
+
+	&.down {
+		width: $width;
+		height: $length;
+
+		&::after {
+			@extend .tip;
+			top: 100%;
+			margin-left: -12.5px;
+			border-left: $tip-width solid transparent;
+			border-right: $tip-width solid transparent; 
+			border-top: $tip-width solid #333;
+		}
+	}
 }
