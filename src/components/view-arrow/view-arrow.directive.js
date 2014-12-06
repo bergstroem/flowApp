@@ -4,8 +4,8 @@ angular.module('flowApp')
 .directive('viewArrow', function () {
   return {
     restrict: 'E',
-    scope {
-    	
+    scope: {
+
     },
     templateUrl: '/components/view-arrow/view-arrow.directive.html'
   };
