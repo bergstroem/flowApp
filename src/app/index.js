@@ -6,7 +6,7 @@ angular.module('flowApp', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'u
       .state('home', {
         url: '/home',
         templateUrl: 'app/main/main.html',
-        controller: 'MainCtrl'
+        controller: 'MainCtrl as mainCtrl'
       })
       .state('flow', {
         url: '/',
