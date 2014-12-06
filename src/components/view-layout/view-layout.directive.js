@@ -7,6 +7,9 @@ angular.module('flowApp').directive('viewLayout', function () {
     scope: {
       views: '='
     },
-    templateUrl: '/components/view-layout/view-layout.directive.html'
+    templateUrl: '/components/view-layout/view-layout.directive.html',
+    link: function(scope, element, attrs) {
+      
+    }
   };
 });
