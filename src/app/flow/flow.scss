@@ -37,11 +37,11 @@ $tip-width: 15px;
 	}
 
 	.box {
-		$width: auto;
+		width: 50px;
 		height: 50px;
 		background: #e55;
 		position: absolute;
-		margin-left: -($width / 2);
+		margin-left: -25px;
 		margin-top: -20px;
 		left: 50%;
 	}
