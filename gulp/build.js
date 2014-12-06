@@ -27,7 +27,7 @@ gulp.task('injector:css:preprocessor', function () {
       transform: function(filePath) {
         filePath = filePath.replace('src/app/', '');
         filePath = filePath.replace('src/components/', '../components/');
-        return '@import \'' + filePath + '\';';
+        return '';
       },
       starttag: '// injector',
       endtag: '// endinjector',
