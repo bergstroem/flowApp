@@ -1,9 +1,11 @@
 
 
 view-box {
-  width: 100px;
-	height: 100px;
-	background: #9ce;
+  	width: 100px;
+	background: #f00;
 	padding: 15px;
 	display: block;
+	height: auto;
+	overflow: hidden;
+	margin: 40px;
 }
