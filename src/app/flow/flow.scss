@@ -2,6 +2,13 @@ $width: 6px;
 $length: 400px;
 $tip-width: 15px;
 
+.tip {
+	content: " ";
+	position: absolute;
+	width: 0; 
+	height: 0;
+}
+
 .box {
 	width: 100px;
 	height: 100px;
@@ -30,40 +37,34 @@ $tip-width: 15px;
 	}
 
 	.box {
-		width: 50px;
+		$width: auto;
 		height: 50px;
 		background: #e55;
 		position: absolute;
-		margin-left: -25px;
+		margin-left: -($width / 2);
 		margin-top: -20px;
 		left: 50%;
 	}
 
 	/* if --> */
 	&-right::after {
-		content: " ";
-		width: 0; 
-		height: 0;
-		float: right;
+		@extend .tip;
+		right: 0px;
+		margin-top: -12.5px;
 		margin-right: -$tip-width;
 		border-top: $tip-width solid transparent;
 		border-bottom: $tip-width solid transparent; 
 		
 		border-left: $tip-width solid #333; 
-		margin-top: -12.5px;
 	}
 
 	&-down::after {
-		content: " ";
-		position: absolute;
-		width: 0; 
-		height: 0;
+		@extend .tip;
+		top: 100%;
 		margin-left: -12.5px;
 		border-left: $tip-width solid transparent;
 		border-right: $tip-width solid transparent; 
-		
-		border-top: $tip-width solid #333; 
-		top: 100%;
+		border-top: $tip-width solid #333;
 	}
 
 	.percentage {
@@ -78,9 +79,7 @@ $tip-width: 15px;
 		border-radius: 20px;
 
 		&::after {
-			content: " ";
-			width: 0; 
-			height: 0;
+			@extend .tip;
 			float: left;
 			margin-left: -20px;
 			left: 50%;
@@ -88,8 +87,6 @@ $tip-width: 15px;
 			border-right: 20px solid transparent; 
 			
 			border-bottom: 10px solid #333; 
-			margin-top: -10px;
-			position: absolute;
 			margin-top: -7px;
 		}
 	}
