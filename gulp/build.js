@@ -6,7 +6,7 @@ var $ = require('gulp-load-plugins')({
   pattern: ['gulp-*', 'main-bower-files', 'uglify-save-license', 'del']
 });
 
-gulp.task('styles', ['wiredep', 'injector:css:preprocessor'], function () {
+gulp.task('styles', ['injector:css:preprocessor'], function () {
   return gulp.src(['src/app/index.scss', 'src/app/vendor.scss'])
     .pipe($.sass({style: 'expanded'}))
     .on('error', function handleError(err) {
@@ -22,7 +22,7 @@ gulp.task('injector:css:preprocessor', function () {
     .pipe($.inject(gulp.src([
         'src/{app,components}/**/*.scss',
         '!src/app/index.scss',
-        '!src/app/vendor.scss' 
+        '!src/app/vendor.scss'
       ], {read: false}), {
       transform: function(filePath) {
         filePath = filePath.replace('src/app/', '');
@@ -80,7 +80,7 @@ gulp.task('partials', function () {
     .pipe(gulp.dest('.tmp/inject/'));
 });
 
-gulp.task('html', ['wiredep', 'injector:css', 'injector:js', 'partials'], function () {
+gulp.task('html', ['injector:css', 'injector:js', 'partials'], function () {
   var htmlFilter = $.filter('*.html');
   var jsFilter = $.filter('**/*.js');
   var cssFilter = $.filter('**/*.css');
