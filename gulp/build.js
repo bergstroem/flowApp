@@ -54,18 +54,7 @@ gulp.task('jshint', function () {
     .pipe($.jshint.reporter('jshint-stylish'));
 });
 
-gulp.task('injector:js', ['jshint', 'injector:css'], function () {
-  return gulp.src('src/index.html')
-    .pipe($.inject(gulp.src([
-        'src/{app,components}/**/*.js',
-        '!src/{app,components}/**/*.spec.js',
-        '!src/{app,components}/**/*.mock.js'
-      ], {read: false}), {
-      ignorePath: 'src',
-      addRootSlash: false
-    }))
-    .pipe(gulp.dest('src/'));
-});
+
 
 gulp.task('partials', function () {
   return gulp.src('src/{app,components}/**/*.html')
