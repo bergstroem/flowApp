@@ -13,7 +13,6 @@ $arrow-color: #333;
 view-arrow {
   display: block;
   background: $arrow-color;
-  margin: 50px;
   position: relative;
 
   &.right {
@@ -30,6 +29,16 @@ view-arrow {
 			
 			border-left: $tip-width solid $arrow-color; 
 		}
+
+		.box {
+			width: 50px;
+			height: 50px;
+			background: #e55;
+			position: absolute;
+			margin-left: -25px;
+			margin-top: -20px;
+			left: 50%;
+		}
 	}
 
 	&.down {
@@ -44,6 +53,16 @@ view-arrow {
 			border-right: $tip-width solid transparent; 
 			border-top: $tip-width solid $arrow-color;
 		}
+
+		.box {
+			width: 50px;
+			height: 50px;
+			background: #e55;
+			position: absolute;
+			margin-left: -20px;
+			margin-top: -25px;
+			top: 50%;
+		}
 	}
 
 	.percentage {
@@ -53,7 +72,7 @@ view-arrow {
 		padding: 0 10px 5px 10px;
 		font-size: 20px;
 		text-align: left;
-		margin: 20px 0 0 20px;
+		margin: 14px 0 0 20px;
 		position: absolute;
 		border-radius: 20px;
 
@@ -66,7 +85,7 @@ view-arrow {
 			border-right: 20px solid transparent; 
 			
 			border-bottom: 10px solid $arrow-color; 
-			margin-top: -7px;
+			top: -7px;
 		}
 	}
 }

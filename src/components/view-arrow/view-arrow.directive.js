@@ -5,7 +5,7 @@ angular.module('flowApp')
   return {
     restrict: 'E',
     scope: {
-
+    	arrow: '='
     },
     templateUrl: '/components/view-arrow/view-arrow.directive.html'
   };

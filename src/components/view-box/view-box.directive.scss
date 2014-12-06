@@ -1,11 +1,13 @@
-
+$width: 150px;
 
 view-box {
-  	width: 100px;
-	background: #f00;
-	padding: 15px;
+  	width: $width;
+	background: #e55;
 	display: block;
-	height: auto;
-	overflow: hidden;
-	margin: 40px;
+	overflow: visible;
+
+	view-arrow {
+		left: $width;
+		top: -50px;
+	}
 }
