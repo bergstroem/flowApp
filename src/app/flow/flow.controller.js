@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('flow')
+angular.module('flowApp')
 	.controller('FlowCtrl', function($scope) {
-		
+
 	});
