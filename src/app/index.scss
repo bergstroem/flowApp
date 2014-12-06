@@ -5,9 +5,7 @@ html {
 }
 
 
-// injector
-@import 'flow/flow.scss';
 @import '../components/view-arrow/view-arrow.directive.scss';
 @import '../components/view-box/view-box.directive.scss';
 @import '../components/view-layout/view-layout.directive.scss';
-// endinjector
+@import 'flow/flow.scss';
