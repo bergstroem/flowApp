@@ -1,7 +1,50 @@
+<view-box view="view" ng-repeat="view in views" id="{{view.label}}"></view-box>
 
-<view-arrow class="right"></view-arrow>
+<style>
 
-<view-arrow class="down"></view-arrow>
+	view-box {
+		position: relative;
+		float: left;
+		text-align: center;
+	}
 
+	view-box > * {
+		margin: 20px 0px;
+	}
 
-<view-box view="view" ng-repeat="view in views"></view-box>
+	view-box > view-arrow.right {
+		margin-left: 0px;
+		margin-bottom: 150px;
+	}
+
+	view-box > view-arrow.right > .box {
+		width: 80px;
+		margin-left: -40px;
+	}
+
+	#view1 {
+		height: 300px;
+	}
+
+	#view2 {
+		top: 0px;
+		left: 415px;
+		height: 150px;
+	}
+
+	#view3 {
+		left: 265px;
+		top: 170px;
+		position: relative;
+		width: 150px;
+		background: #e55;
+		height: 150px;
+		overflow: hidden;
+		text-align: center;
+	}
+
+	#view3 > * {
+		margin: 20px 0px;
+	}
+
+</style>
