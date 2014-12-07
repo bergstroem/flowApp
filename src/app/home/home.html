@@ -1,7 +1,3 @@
-<md-toolbar>
-	<h1 class="md-toolbar-tools">Flow</h1>
-</md-toolbar>
-
 <section id="top">
 	<img src="https://ununsplash.imgix.net/photo-1416339684178-3a239570f315?q=75&fm=jpg&s=c39d9a3bf66d6566b9608a9f1f3765af" alt="background" /> 
 	<h1>Explore your <strong>Flow</strong></h1>
@@ -9,19 +5,22 @@
 
 <section id="intro" layout="row" layout-align="space-around center">
 	<div flex>
-		<h2>Flow</h2>
+		<img src="assets/images/hipster.svg" alt="flow" />
+		<h1>What is Flow?</h1>
 		<p>
 			Flow is a simple tool that let's you log your users' usage flow in your application, and then visualize it.
 		</p>
 	</div>
 	<div flex>
-		<h2>SDK</h2>
+		<img src="assets/images/sdk.svg" alt="sdk" />
+		<h1>SDK with ease</h1>
 		<p>
 			The Flow SDK is developed for simplicity and ease. A few lines of code in your application is all that is needed to get your flow started.
 		</p>
 	</div>
-	<div flex>
-		<h2>Web or mobile</h2>
+	<div flex>	
+		<img src="assets/images/platform.svg" alt="platform" />
+		<h1>Web or mobile</h1>
 		<p>
 			Flow works seamlessly on both web or native mobile applications, there is no need to have a bunch of tools depending on platform. 
 		</p>
@@ -29,7 +28,7 @@
 </section>
 
 <section id="code" layout="row">
-	<md-card>
+	<md-card flex>
 		<h2>1. Add the SDK</h2>
 		<code>
 			/* Boot the SDK */<br>
@@ -43,7 +42,7 @@
 		</code>
 	</md-card>
 
-	<md-card>
+	<md-card flex>
 		<h2>2. API-response</h2>
 		<code>
 			{<br>
@@ -64,13 +63,13 @@
 		</code>
 	</md-card>
 
-	<md-card>
+	<md-card flex class="centertext">
 		<h2>3. Visualization</h2>
-		<img src="assets/images/flow.png" alt="flow" />
+		<md-button href="/home" class="md-raised" target="_blank">Demo</md-button>
 	</md-card>
 </section>
 
 <section id="bottom">
 	<md-button href="https://github.com/bergstroem1/flow-sdk" class="md-raised" target="_blank">View on GitHub</md-button>
-
+	<p>Made by Elin Nilsson, Emil Sjölander and Mattias Bergström during the Uniaden Hackathon in december 2014.</p>
 </section>
